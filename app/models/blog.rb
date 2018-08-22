@@ -12,6 +12,6 @@ class Blog < ApplicationRecord
   end
   
  def self.featured_blogs
-  all
+  limit(2)
  end
 end
