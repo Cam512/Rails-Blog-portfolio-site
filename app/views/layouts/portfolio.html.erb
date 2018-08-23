@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -16,19 +15,15 @@
   </head>
 
 <body>
- <!--start of navigation -->
+ <!-- navigation -->
  <%= render 'shared/portfolio_nav'%>
-  <!--end of navigation -->
+  <!-- masthead -->
+<%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin)  %>
 
-  <!-- start of masthead -->
-<%= render 'shared/portfolio_masthead' %>
-  <!-- start of masthead -->
-
+<!-- body -->
 <%= yield %>
-<!-- start of footer -->
-<%= render 'shared/portfolio_footer' %>
-    
-    <!-- end of footer -->
+<!-- footer -->
+<%= render 'shared/portfolio_footer' %>   
 <%= source_helper("application") %>
 
   </body>
