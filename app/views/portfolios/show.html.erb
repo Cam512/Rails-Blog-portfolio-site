@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-md-7">
       <%= image_tag portfolio_img(@portfolio_item.thumb_image, 'main'), width: '100%' %>
+
+      <%= link_to 'Edit', edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %> 
+      
     </div>
 
     <div class="col-md-5">
