@@ -6,7 +6,9 @@
 
 
 
-<p><%= @blog.body %></p>
+<p>
+<%= markdown @blog.body %>
+</p>
 
 <% if logged_in?(:site_admin) %> 
  <div>
