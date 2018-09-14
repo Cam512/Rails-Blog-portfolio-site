@@ -2,14 +2,19 @@
 
    <h2><%= @blog.title %></h2>
 
-   <p>
-     <%= @blog.topic.title %>
-   </p>
+   <p><%= @blog.topic.title %></p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> 
-<p>
-   <%= @blog.body %>
-</p>
+
+
+<p><%= @blog.body %></p>
+
+<% if logged_in?(:site_admin) %> 
+ <div>
+  <%= link_to 'Edit blog post', edit_blog_path(@blog), class: 'btn btn-warning'%>
+ </div>
+ <br>
+<% end %>
+
   <nav class="blog-pagination">
     <a class="btn btn-outline-primary" href="#">Older</a>
     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
@@ -20,4 +25,5 @@
 <div id="comments" data-blog-id="<%= @blog.id %>">
   <%= render @blog.comments %>
  </div>
+
 </div>
