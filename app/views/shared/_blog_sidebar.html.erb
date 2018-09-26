@@ -1,24 +1,28 @@
  <aside class="col-md-3 blog-sidebar">
-          <div class="p-3 mb-3 bg-light rounded">
-            <h4 class="font-italic">About</h4>
-            <p class="mb-0">I am a front end web developer who has spent the past decade working in the medical field. </p>
+      <div class="p-3 mb-3 bg-light rounded">
+          <h4 class="font-italic">About</h4>
+        <p class="mb-0">I am a front end web developer who has spent the past decade working in the medical field. </p>
+          
           <br>
+
+           <%= source_helper("alert alert-info blog-sidebar-source") %>
+        
           <div class="sidebar-module">
            <h4>Topics</h4>
            <% @side_bar_topics.each do |topic| %>
             <p><%= link_to topic.title, topic_path(topic) %></p>
           <% end %>
          </div>
-
          <br>
-          <div>          
-            <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled social-links">
-              <li><a href="https://github.com/Cambo512"><%= fa_icon "github-square" %></a></li>
-              <li><a href="https://www.facebook.com/cameron.horejs"><%= fa_icon "facebook" %></a></li>
-              <li><a href="https://www.instagram.com/camhorejs/"><%= fa_icon "instagram" %></a></li>
-              <li><a href="https://www.linkedin.com/in/cameron-horejs-65bb6a165/"><%= fa_icon "linkedin" %></a></li>
-            </ol>
-           </div>
-          </div>
-   </aside>
+
+        <div>          
+          <h4 class="font-italic">Elsewhere</h4>
+           <ol class="list-unstyled social-links">
+            <li><a href="https://github.com/Cambo512"><%= fa_icon "github-square" %></a></li>
+            <li><a href="https://www.facebook.com/cameron.horejs"><%= fa_icon "facebook" %></a></li>
+            <li><a href="https://www.instagram.com/camhorejs/"><%= fa_icon "instagram" %></a></li>
+            <li><a href="https://www.linkedin.com/in/cameron-horejs-65bb6a165/"><%= fa_icon "linkedin" %></a></li>
+          </ol>
+        </div>
+   </div>
+</aside>
