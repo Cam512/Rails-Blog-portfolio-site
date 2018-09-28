@@ -17,14 +17,13 @@
   </head>
 
 <body>
- <!-- navigation -->
+
  <%= render 'shared/portfolio_nav'%>
-  <!-- masthead -->
+ 
 <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin)  %>
 
-<!-- body -->
 <%= yield %>
-<!-- footer -->
+
 <%= render 'shared/portfolio_footer' %>
 
 <%= alerts %>
