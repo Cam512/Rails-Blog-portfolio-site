@@ -1,15 +1,71 @@
-<h1>About Me </h1>
+<div class="app-card-container">
+ <div class="card">
+  <h1>About Me </h1>
 
-<hr>
+  <hr>
 
-<div class='row'>
-  <div class='col-md-4'>
+  <div class='row'>
+   <div class='col-md-5'>
+   <%= image_tag "profile.jpg", width: 200, alt: "profile image", class: 'profile-img' %>
 
+     <div class="skills">
+      <% @skills.each do |skill| %>
+       <div class="skill">
+        <h4><%= skill.title %></h4>
+         <div class="progress">
+           <div class="progress-bar progress-bar-striped bg-warning"
+           role="progressbar"
+           aria-valuenow="<%= skill.percent_utilized %>"
+           aria-valuemax="100"
+           style="width: <%=skill.percent_utilized %>%"
+           ></div>
+         </div>
+       </div>
+       
+        <% end %>        
+     </div>
+   </div>
 
-    <%= image_tag "profile.jpg", width: 300, alt: "profile image" %>
-  </div>
-  <div class="col-md-8">
-  <p>I'm new to web developement</p>
+   <div class="col-md-7">
+   <p>I've spent the last decade working in the medical field. My current work combines cardiac and vascular ultrasound report transcription with Ultrasound equipment technical support, and a bit of graphic design for report styling.  
+   
+   </p>
 
-  </div>
+   <p>
+   I also have experience working in a static free environment building and testing servers and other enterprise level computer systems.
+   </p>
+
+    <p>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#jobHistory"
+        aria-expanded="false"
+        aria-controller="jobHistory"
+      >
+      Job History
+      </button>
+    </p>
+    <p>
+     <div class="collapse" id="jobHistory">
+        <div class="card card-block">
+         Ultrasound transcription/ Ultrasound tech support | Biltmore Cardiology 2006- present
+        </div>
+        <div class="card card-block">
+         Assembly technician | Arrow Electronics 2008
+        </div>
+        <div class="card card-block">
+         Level 1 Internet service provider technical support | 2Wire 2008
+        </div>
+        <div class="card card-block">
+        Team Leader | Harkins Theaters 2004-2006
+        </div>
+        <div class="card card-block">
+        Level 1 technical support | Dell Computers 2002-2003
+       </div>
+    </p>
+    </div>
+   </div>
+ </div>
 </div>
