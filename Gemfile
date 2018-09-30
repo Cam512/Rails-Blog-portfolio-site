@@ -64,9 +64,9 @@ gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.5'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
-gem 'gritter', '~> 1.2'
+gem "gritter", "1.2.0"
 gem 'redis', '~> 4.0', '>= 4.0.2'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
-ruby "2.3.3"
+ruby "2.4.0"
