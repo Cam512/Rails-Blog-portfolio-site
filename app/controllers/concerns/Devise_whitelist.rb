@@ -12,3 +12,4 @@ module DeviseWhitelist
 end
  
 end   
+  
