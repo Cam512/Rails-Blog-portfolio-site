@@ -20,3 +20,4 @@
 # I don't want to share secrets
 /config/secrets.yml
 .env
+.DS_Store
